@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>{{erro}}</h1>
+    <form action="/login" method="post">
+
+            <section class="form-section">
+                <fieldset class="form-group">
+                    <legend class="form-group-title">Dados Pessoais e Textos</legend>
+
+                    <label for="nome" class="form-label">Nome:</label>
+                    <input type="text" id="nome" name="nome" class="form-input" placeholder="Digite seu nome completo" required minlength="3" />
+
+                    <label for="senha" class="form-Label">Senha:</label>
+                    <input type="password" id="senha" name="senha" class="form-input" placeholder="Minímo de 8 caracteres" required minlength="8" />
+
+                    <button type="submit">ENTRAR</button>
+                </fieldset>
+            </section>
+        </form>
+    
+</body>
+</html>
