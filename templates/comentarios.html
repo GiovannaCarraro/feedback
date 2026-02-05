@@ -6,6 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Comentarios</h1>
+    <!-- <section class="hero is-link">
+        <div class="hero-body">
+          <p class="title">Link hero</p>
+          <p class="subtitle">Link subtitle</p>
+        </div>
+    </section> -->
+
+    <section class="section"> 
+        <form action="/adicionar_comentario" method="POST">
+            <input type="text" class="input", name="comentario">
+            <button type="submit" class="submit">ENVIAR</button>
+        </form>
+    </section>
+
+    <section class="section">
+        {% for comentario in lista_comentario %}
+        <div class="box">
+            <span>{{ comentario }}</span> 
+        </div> 
+        {% endfor %}      
+    </section>
+</section>
 </body>
 </html>
