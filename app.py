@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 
 
 app = Flask(__name__)
@@ -26,7 +26,8 @@ def login_post():
     usuario = request.form.get("usuario")
     senha = request.form.get("senha")
 
-    if usuario == "frankocean" and senha == "777":
+    if usuario == "giovanna" and senha == "123":
+        session["usuario"] = "123"
         return "Eita você acessou uma area restrita"
     else:
         return render_template("login.html", erro = "Acesso negado!")
@@ -35,9 +36,10 @@ def login_post():
 # def pag_comentario():
 #     return render_template("comentarios.html")
 
-@app.route("/comentarios")
+@app.route("/comentarios", methods = ["GET"])
 def pag_comentario():
-    return render_template("comentarios.html", lista_comentarios_html = lista_comentarios)
+    if "usuario" in session:
+        return render_template("comentarios.html", lista_comentarios_html = lista_comentarios)
 
 
 

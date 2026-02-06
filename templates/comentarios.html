@@ -6,6 +6,99 @@
     <title>Comentarios</title>
 </head>
 <body>
+ 
+    <style>
+        /* ===== FUNDO DA PÁGINA ===== */
+body {
+    background: linear-gradient(135deg, #ffb6d5 0%, #ff82b4 50%, #ff5fa2 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== HERO ===== */
+.hero.is-link {
+    background: linear-gradient(135deg, #ff4f9a 0%, #ff2f86 100%);
+    box-shadow: 0 6px 25px rgba(255, 47, 134, 0.4);
+}
+
+.hero .title {
+    color: #fff;
+    font-weight: 800;
+}
+
+.hero .subtitle {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===== FORMULÁRIO ===== */
+form {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    gap: 10px;
+}
+
+/* INPUT */
+.input {
+    border-radius: 10px;
+    border: 1px solid rgba(255, 105, 180, 0.5);
+    background: rgba(255, 255, 255, 0.85);
+    color: #b3005e;
+    transition: all 0.25s ease;
+}
+
+.input:focus {
+    border-color: #ff2f86;
+    box-shadow: 0 0 10px rgba(255, 47, 134, 0.5);
+}
+
+/* BOTÃO ENVIAR */
+.button {
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff4f9a 0%, #ff2f86 100%);
+    color: white;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 5px 15px rgba(255, 47, 134, 0.4);
+    transition: all 0.25s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #ff2f86 0%, #e6006f 100%);
+    box-shadow: 0 8px 25px rgba(255, 47, 134, 0.6);
+}
+
+/* ===== LISTA DE COMENTÁRIOS ===== */
+.section {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* CADA COMENTÁRIO */
+.box {
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 182, 213, 0.6);
+    box-shadow: 0 8px 25px rgba(255, 79, 154, 0.25);
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.box:hover {
+    transform: translateY(-3px);
+}
+
+/* TEXTO DO COMENTÁRIO */
+.box span {
+    color: #8b004b;
+    font-size: 1rem;
+    font-weight: 500;
+}
+    </style>
+
+
 
 <section class="hero is-link">
     <div class="hero-body">
