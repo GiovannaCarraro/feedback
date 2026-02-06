@@ -2,31 +2,32 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios</title>
 </head>
 <body>
-    <!-- <section class="hero is-link">
-        <div class="hero-body">
-          <p class="title">Link hero</p>
-          <p class="subtitle">Link subtitle</p>
-        </div>
-    </section> -->
 
-    <section class="section"> 
-        <form action="/adicionar_comentario" method="POST">
-            <input type="text" class="input", name="comentario">
-            <button type="submit" class="submit">ENVIAR</button>
+<section class="hero is-link">
+    <div class="hero-body">
+        <p class="title">Comentários</p>
+        <p class="subtitle">Seu site</p>
+    </div>
+</section>
+
+    <section>
+        <form action="/adicionar" method="POST">
+            <input type="text" class="input" name="comentario">
+            <button type="submit" class="button">Enviar</button>
         </form>
     </section>
 
-    <section class="section">
-        {% for comentario in lista_comentario %}
-        <div class="box">
-            <span>{{ comentario }}</span> 
-        </div> 
-        {% endfor %}      
+        <section class="section">
+            {% for comentario in lista_comentarios_html %}
+            <div class="box">
+                <span>{{ comentario }}</span>
+            </div> 
+            {% endfor %}
     </section>
-</section>
+    
 </body>
 </html>
