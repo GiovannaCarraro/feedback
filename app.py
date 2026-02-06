@@ -42,7 +42,6 @@ def pag_comentario():
         return render_template("comentarios.html", lista_comentarios_html = lista_comentarios)
 
 
-
 @app.route("/adicionar", methods=["POST"])
 def adicionar():
     comentario = request.form.get("comentario")
